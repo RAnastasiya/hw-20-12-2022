@@ -1,0 +1,133 @@
+:root {
+  --size-avatar: 94px;
+  --bg-color-card: #2ba2b8;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img{
+  width: 100%;
+}
+.cards-container {
+  /* якщо картки різні за висотою */
+  margin: auto;
+}
+.cards-title {
+  text-align: center;
+  padding: 20px;
+}
+.flex-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: calc(100% + 20px);
+  margin-left: -10px;
+}
+.user-card {
+  flex: 0 0 calc(4*var(--size-avatar));
+  padding-top: calc(1.6*var(--size-avatar));
+  background-color: var(--bg-color-card);
+  text-align: center;
+  margin: 10px;
+}
+.user-info {
+  background-color: white;
+}
+.user-avatar{
+  display: inline-block;
+  width: var(--size-avatar);
+  height: var(--size-avatar);
+  margin-top: calc(-0.5*var(--size-avatar));
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+}
+.user-avatar::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+.user-avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 4px solid white;
+  box-sizing: border-box;
+}
+.user-name {
+  padding-top: 18px;
+}
+.user-address {
+  padding: 10px 0 20px; 
+  position: relative;
+}
+.user-header,
+.container-btn {
+  text-transform: capitalize;
+}
+.user-header,
+.container-btn, 
+.user-description {
+  width: 100%;
+  border-left: 1px solid var(--bg-color-card);
+  border-right: 1px solid var(--bg-color-card);
+}
+.container-btn {
+  padding: 18px 0 24px;
+  position: relative;
+}
+.container-btn::before,
+.container-btn::after {
+  content: '';
+  width: 80%;
+  height: 1px;
+  position: absolute;
+  left: 10%;
+  background: #e5e5e5;
+}
+.container-btn::before{
+  top: 0;
+}
+.container-btn::after {
+  bottom: 0;
+}
+.btn-follow,
+.btn-send-message {
+  padding: 8px 10px;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+}
+.btn-follow {
+  background: #29a745;
+}
+.btn-send-message {
+  background: #2ba2b8;
+}
+.user-description {
+  padding: 18px 30px 28px;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.social-list {
+  padding: 10px 0;
+  text-align: center;
+}
+.social-list-item {
+  display: inline-block;
+  margin: 0 10px;
+}
